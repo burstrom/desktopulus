@@ -89,16 +89,33 @@ int main(int argc, char** argv)
 	/*
 		Captures mouse movement to control camera.
 	*/
-	auto mouseMove = canvas->mouse()->move()->connect([&](input::Mouse::Ptr mouse, int dy, int dx){
-		//Updates the rotation speed by checking the mouse movement and multiplying with a constant.
-		rotSpeedX = (float)dx * .01f;
-		rotSpeedY = (float)dy * .01f;
+	Signal<input::Mouse::Ptr, int, int>::Slot mouseMove;
+/*	auto mouseDown = canvas->mouse()->leftButtonDown()->connect([&](input::Mouse::Ptr mouse){
+		auto mouseMove = canvas->mouse()->move()->connect([&](input::Mouse::Ptr mouse, int dy, int dx){
+			//Updates the rotation speed by checking the mouse movement and multiplying with a constant.
+			rotSpeedX = (float)dx * .01f;
+			rotSpeedY = (float)dy * .01f;
 
-	});
+		});
+	};
+*/
+    auto mouseDown = canvas->mouse()->leftButtonDown()->connect([&](input::Mouse::Ptr mouse)
+    {
+        mouseMove = canvas->mouse()->move()->connect([&](input::Mouse::Ptr mouse, int dy, int dx)
+        {
+            rotSpeedX = (float) dx * .01f;
+            rotSpeedY = (float) -dy * .01f;
+        });
+    });	
+
+    auto mouseUp = canvas->mouse()->leftButtonUp()->connect([&](input::Mouse::Ptr mouse)
+    {
+        mouseMove = nullptr;
+    });
 
 	auto _ = sceneManager->assets()->complete()->connect([=](file::AssetLibrary::Ptr assets)
 	{
-		
+
 		auto cubeGeometry = geometry::CubeGeometry::create(sceneManager->assets()->context());
 
 		assets->geometry("cubeGeometry", cubeGeometry);
