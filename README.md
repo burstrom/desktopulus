@@ -1,16 +1,30 @@
-# Desktopulus
-### Desktopulus is a work in progress 3D Virtual Desktop.
+# Desktopulus v.0.0.0.1-pre-alphabeta
+###### Desktopulus is a 3D Virtual Desktop software which will be Open-source.
+####Initial project developers: [Burstrom](https://github.com/burstrom), [Kandarian](https://github.com/Kandarian), [Zakjut](https://github.com/Zakjut) & [Olleboll](https://github.com/Olleboll)
 
 
-It is for now only in the development phase. 
+## **NOTE:** This project is still in it's early development-phase.
+
+
+**Desktopulus** is a project we are working on for a university course. This means that we have to be reserved when accepting contribution from others for now. This will be changed as soon as our course has ended or when we've gotten an OK from our supervisor. 
+
+But please follow the work and if you have any features that you think should be implemented, then create a new issue about it! 
+(We appreciate anyone who wants to help us, but for now we have to get some first inits
 
 Our goal is to have a software that works on crossplattform: (Win,Lin & OSx)
 
 For starters we have some smaller goals to finish:
 
-First goals:
+***
 
-  [DEVELOPMENT STAGE] Mirroring the monitor in a 3D-program.
+## Current goals:
+
+| Status | Description |
+| ------------- | -----:|
+| [IN PROGRESS] | Working 3D environment |
+| [DEVELOPMENT STAGE] | Mirroring the monitor in a 3D-program.|
+
+
 
   [PLANNING STAGE] Being able to Use the desktop while mirroring the monitor in the 3D program
 
