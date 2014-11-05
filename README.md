@@ -1,4 +1,10 @@
-Desktopulus is a work in progress 3D Virtual Desktop.
+require 'github/markup'
+GitHub::Markup.render('README.markdown', "* One\n* Two")
+
+h1 Desktopulus
+p Desktopulus is a work in progress 3D Virtual Desktop.
+
+table
 
 It is for now only in the development phase. 
 
