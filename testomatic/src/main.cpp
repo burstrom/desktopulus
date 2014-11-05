@@ -43,16 +43,20 @@ int main(int argc, char** argv)
 	//X, Y, Z, positive means right.
 	auto screen1 = scene::Node::create("screen1")
 		->addComponent(Transform::create(math::Matrix4x4::create()
-			->translation(1.5f, 0.f, 0.5f)));
+			->translation(3.5f, 0.f, 0.5f)));
 
 
 	auto screen2 = scene::Node::create("screen2")
 		->addComponent(Transform::create(math::Matrix4x4::create()
-			->translation(-1.5f, 0.f, 0.5f)));
+			->translation(-3.5f, 0.f, 0.5f)));
 
 	auto screen3 = scene::Node::create("screen3")
 		->addComponent(Transform::create(math::Matrix4x4::create()
 			->translation(0.f, 0.f, 0.f)));	
+
+	auto invisActor = scene::Node::create("invisActor")
+		->addComponent(Transform::create(math::Matrix4x4::create()
+			->translation(0.f, 0.f, 35.f)));
 
 
 	/*
@@ -63,8 +67,18 @@ int main(int argc, char** argv)
 		->addComponent(Transform::create(
 		Matrix4x4::create()->lookAt(Vector3::zero(), Vector3::create(0.f, 0.f, 3.f))
 		))
-		->addComponent(PerspectiveCamera::create(1366.f / 768.f, (float)PI * 0.25f, .1f, 1000.f));
-	root->addChild(camera);
+		->addComponent(PerspectiveCamera::create(1366.f / 768.f, (float)PI * 0.01f, .1f, 1000.f));
+		//->addComponent(PerspectiveCamera::create(1366.f / 768.f, (float)PI * 0.25f, .1f, 1000.f));
+
+	/*
+		Add the camera to the invisible actor
+	*/	
+	invisActor->addChild(camera);
+
+	/*
+		Add the invisible actor to the root.
+	*/
+	root->addChild(invisActor);
 
 	/*
 		In order to apply inertia to the camera.
@@ -95,7 +109,7 @@ int main(int argc, char** argv)
 			assets->effect("effect/Basic.effect")
 			));
 		//Defines initial rotation of object.
-		screen1->component<Transform>()->matrix()->prependRotationY(.75f);
+		screen1->component<Transform>()->matrix()->prependRotationY(0.90f);
 
 		screen2->addComponent(Surface::create(
 			assets->geometry("cubeGeometry"),
@@ -125,7 +139,7 @@ int main(int argc, char** argv)
 	{
 		//Updates the actual camera orientation.
 		camera->component<Transform>()->matrix()->appendRotationY(rotSpeedY);
-    	camera->component<Transform>()->matrix()->appendRotationX(rotSpeedX);
+    	//camera->component<Transform>()->matrix()->appendRotationX(rotSpeedX);
 
     	//Scales the "after the fact"-movement to make sure the camera stops moving.
 		rotSpeedX *= .10f;
