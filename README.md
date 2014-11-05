@@ -35,10 +35,14 @@ For starters we have some smaller goals to finish:
 | [PLANNING STAGE] | Making the program stable |
 | [PLANNING STAGE] | Crossplattform support, Linux/Windows/OSx |
 
-###
+***
 
 This project uses the [Minko3D](http://minko.io/) framework. 
-Their project github can bel located here: [github.com/aerys/minko/](https://github.com/aerys/minko/)
 
-Thanks for paying attention to this project!
--- The desktopulus guys.
+*github can be located here: [github.com/aerys/minko/](https://github.com/aerys/minko/)*
+
+***
+
+*Thanks for paying attention to this project!*
+
+*-- Desktopulus-devs.*
