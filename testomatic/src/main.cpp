@@ -69,15 +69,17 @@ int main(int argc, char** argv)
 	/*
 		In order to apply inertia to the camera.
 	*/
-	float camerationRotationSpeed = 0.f; 
-	
+	float rotSpeedX = 0.f; 
+	float rotSpeedY = 0.f;
+
 	/*
 		Captures mouse movement to control camera.
 	*/
 	auto mouseMove = canvas->mouse()->move()->connect([&](input::Mouse::Ptr mouse, int dy, int dx){
-		//Calls the appendRotation functions for the transformation component of the camera in order to update.
-    	camera->component<Transform>()->matrix()->appendRotationY((float)dy * .1f);
-    	camera->component<Transform>()->matrix()->appendRotationX((float)dx * .1f);
+		//Updates the rotation speed by checking the mouse movement and multiplying with a constant.
+		rotSpeedX = (float)dx * .01f;
+		rotSpeedY = (float)dy * .01f;
+
 	});
 
 	auto _ = sceneManager->assets()->complete()->connect([=](file::AssetLibrary::Ptr assets)
@@ -121,6 +123,15 @@ int main(int argc, char** argv)
 
 	auto enterFrame = canvas->enterFrame()->connect([&](Canvas::Ptr canvas, float time, float deltaTime)
 	{
+		//Updates the actual camera orientation.
+		camera->component<Transform>()->matrix()->appendRotationY(rotSpeedY);
+    	camera->component<Transform>()->matrix()->appendRotationX(rotSpeedX);
+
+    	//Scales the "after the fact"-movement to make sure the camera stops moving.
+		rotSpeedX *= .10f;
+		rotSpeedY *= .10f;
+
+		//"advances" the scene.
 		sceneManager->nextFrame(time, deltaTime);
 	});
 
