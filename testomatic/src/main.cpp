@@ -98,6 +98,7 @@ int main(int argc, char** argv)
 
 	auto _ = sceneManager->assets()->complete()->connect([=](file::AssetLibrary::Ptr assets)
 	{
+		
 		auto cubeGeometry = geometry::CubeGeometry::create(sceneManager->assets()->context());
 
 		assets->geometry("cubeGeometry", cubeGeometry);
@@ -109,14 +110,14 @@ int main(int argc, char** argv)
 			assets->effect("effect/Basic.effect")
 			));
 		//Defines initial rotation of object.
-		screen1->component<Transform>()->matrix()->prependRotationY(0.90f);
+		screen1->component<Transform>()->matrix()->prependRotationY((float)PI*0.97f);
 
 		screen2->addComponent(Surface::create(
 			assets->geometry("cubeGeometry"),
 			material::BasicMaterial::create()->diffuseMap(assets->texture(TEXTURE2)),
 			assets->effect("effect/Basic.effect")
 			));
-		screen2->component<Transform>()->matrix()->prependRotationY(-.75f);
+		screen2->component<Transform>()->matrix()->prependRotationY(-(float)PI*0.97f);
 
 		screen3->addComponent(Surface::create(
 			assets->geometry("cubeGeometry"),
