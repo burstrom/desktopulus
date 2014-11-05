@@ -15,6 +15,7 @@ using namespace minko::math;
 const std::string TEXTURE1 = "1.png";
 const std::string TEXTURE2 = "2.png";
 const std::string TEXTURE3 = "3.png";
+const std::string GRIDTEXTURE = "grid.png";
 
 int main(int argc, char** argv)
 {
@@ -30,9 +31,12 @@ int main(int argc, char** argv)
 		->queue(TEXTURE1)
 		->queue(TEXTURE2)
 		->queue(TEXTURE3)
+		->queue(GRIDTEXTURE)
 		->queue("effect/Basic.effect");
 
-	sceneManager->assets()->geometry("cube", geometry::CubeGeometry::create(sceneManager->assets()->context()));
+	sceneManager->assets()
+		->geometry("cube", geometry::CubeGeometry::create(sceneManager->assets()->context()));
+
 
 	//Create the root object, everything goes in here?
 	auto root = scene::Node::create("root")
@@ -54,9 +58,17 @@ int main(int argc, char** argv)
 		->addComponent(Transform::create(math::Matrix4x4::create()
 			->translation(0.f, 0.f, 0.f)));	
 
+	/*
+		the invisible actor is the "camera man". The camera will rotate around her.
+	*/
 	auto invisActor = scene::Node::create("invisActor")
 		->addComponent(Transform::create(math::Matrix4x4::create()
 			->translation(0.f, 0.f, 35.f)));
+
+	auto grid = scene::Node::create("grid")
+		->addComponent(Transform::create(
+			Matrix4x4::create()->appendScale(100.0f, 100.0f, 100.0f)
+		));
 
 
 	/*
@@ -90,24 +102,21 @@ int main(int argc, char** argv)
 		Captures mouse movement to control camera.
 	*/
 	Signal<input::Mouse::Ptr, int, int>::Slot mouseMove;
-/*	auto mouseDown = canvas->mouse()->leftButtonDown()->connect([&](input::Mouse::Ptr mouse){
-		auto mouseMove = canvas->mouse()->move()->connect([&](input::Mouse::Ptr mouse, int dy, int dx){
-			//Updates the rotation speed by checking the mouse movement and multiplying with a constant.
-			rotSpeedX = (float)dx * .01f;
-			rotSpeedY = (float)dy * .01f;
 
-		});
-	};
-*/
+	/*
+		If left mouse button is down, capture movement and apply inertia.
+	*/
     auto mouseDown = canvas->mouse()->leftButtonDown()->connect([&](input::Mouse::Ptr mouse)
     {
         mouseMove = canvas->mouse()->move()->connect([&](input::Mouse::Ptr mouse, int dy, int dx)
         {
-            rotSpeedX = (float) dx * .01f;
-            rotSpeedY = (float) -dy * .01f;
+            rotSpeedX = (float) -dx * .0001f; 	//invert mouse look, also a much greater inertia because trackpads :p
+            rotSpeedY = (float) dy * .001f;
         });
     });	
-
+    /*
+    	If left mouse button is upp, unlink the mouseMove pointer.
+    */
     auto mouseUp = canvas->mouse()->leftButtonUp()->connect([&](input::Mouse::Ptr mouse)
     {
         mouseMove = nullptr;
@@ -119,6 +128,17 @@ int main(int argc, char** argv)
 		auto cubeGeometry = geometry::CubeGeometry::create(sceneManager->assets()->context());
 
 		assets->geometry("cubeGeometry", cubeGeometry);
+
+		/*
+			this is the "grid" object
+		*/
+		grid->addComponent(Surface::create(
+			assets->geometry("cube"),
+			material::BasicMaterial::create()
+				->diffuseMap(assets->texture(GRIDTEXTURE))
+				->triangleCulling(render::TriangleCulling::FRONT),
+			assets->effect("effect/Basic.effect")
+		));
 
 		//Adds texture mesh to the object.
 		screen1->addComponent(Surface::create(
@@ -146,6 +166,7 @@ int main(int argc, char** argv)
 		root->addChild(screen1);
 		root->addChild(screen2);
 		root->addChild(screen3);
+		root->addChild(grid);
 	});
 
 	auto resized = canvas->resized()->connect([&](AbstractCanvas::Ptr canvas, uint w, uint h)
@@ -157,7 +178,8 @@ int main(int argc, char** argv)
 	{
 		//Updates the actual camera orientation.
 		camera->component<Transform>()->matrix()->appendRotationY(rotSpeedY);
-    	//camera->component<Transform>()->matrix()->appendRotationX(rotSpeedX);
+		camera->component<Transform>()->matrix()->appendRotationX(rotSpeedX);
+    	
 
     	//Scales the "after the fact"-movement to make sure the camera stops moving.
 		rotSpeedX *= .10f;
