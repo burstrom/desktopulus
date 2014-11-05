@@ -20,19 +20,25 @@ For starters we have some smaller goals to finish:
 ## Current goals:
 
 | Status | Description |
-| ------------- | -----:|
+| :------------ | :-----|
 | [IN PROGRESS] | Working 3D environment |
 | [DEVELOPMENT STAGE] | Mirroring the monitor in a 3D-program.|
+| [PRE-DEVELOPMENT STAGE] | Implementing support for Oculus Rift |
 
+## Future goals:
+| Status | Description |
+| :------------ | :-----|
+| [PLANNING STAGE] | Being able to Use the desktop while mirroring the monitor in the 3D program |
+| [PLANNING STAGE] | Simulating a non-physical display.|
+| [PLANNING STAGE] | Being able to mirror the non-physical monitor in our program |
+| [PLANNING STAGE] | Being able to change the resolution manually |
+| [PLANNING STAGE] | Making the program stable |
+| [PLANNING STAGE] | Crossplattform support, Linux/Windows/OSx |
 
+###
 
-  [PLANNING STAGE] Being able to Use the desktop while mirroring the monitor in the 3D program
+This project uses the [Minko3D](http://minko.io/) framework. 
+Their project github can bel located here: [github.com/aerys/minko/](https://github.com/aerys/minko/)
 
-Next goals:
-  [PLANNING STAGE] Simulating a non-physical display.
-
-  [PLANNING STAGE] Being able to mirror the non-physical monitor in our program
-
-  [PLANNING STAGE] Being able to change the resolution to whatever the user wants to have (so the 3D display gets larger and more flexible to be used for work)
-
-  [PLANNING STAGE] Making the program stable:
+Thanks for paying attention to this project!
+-- The desktopulus guys.
