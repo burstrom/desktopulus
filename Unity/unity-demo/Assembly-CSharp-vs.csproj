@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{2730B8AE-134C-0AB1-53CB-4F1E45EA8D57}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_5_5;UNITY_4_5;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Hand Types\FingerLineRender.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Hand Types\HandModel.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Hand Types\HandTypeBase.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Hand Types\HandTypeBasic.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Hand Types\HandTypeMultiple.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Hand Types\HandTypeRigged.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Leap Hand States\LeapGodHandState.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Leap Hand States\LeapNoHandState.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Leap Hand States\LeapShootableState.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Leap Hand States\LeapState.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Leap Hand States\LeapSwingableState.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Leap Hand\FingerDetection.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Leap Hand\RiggedHandTransforms.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Leap Hand\UnityHand.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Leap Hand\UnityHandSettings.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Leap Helpers\LeapHandController.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Leap Helpers\LeapInputEx.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Leap Helpers\LeapUnityExtensions.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Leap Objects\LeapBasicObject.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Leap Objects\LeapGameObject.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Leap Objects\LeapInactiveObject.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Leap Objects\LeapShootableObject.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Leap Objects\LeapSwingableObject.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Leap Objects\LeapThrowableObject.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Objects\ManageReturnables.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Objects\Returnable.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Objects\Triggers and Switches\ButtonTrigger.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Objects\Triggers and Switches\ImmediateReturn.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Objects\Triggers and Switches\SwitchTrigger.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Objects\Triggers and Switches\TriggerableObject.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Utility\Callback.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Utility\FSMState.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Utility\FiniteStateMachine.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Utility\Globals.cs" />
+     <Compile Include="Assets\Leap Motion\Leap Controller\Scripts\Utility\Messenger.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Hand States\LeapDrivingLeverState.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Hand States\LeapDrivingState.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Hand States\LeapHandleState.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Objects\LeapBoxingObject.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Objects\LeapFlashlightObject.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Objects\LeapGrenadeObject.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Objects\LeapHandleObject.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Objects\LeapSpeedLever.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Objects\LeapSteeringWheel.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Scenes\ATVRiding\BrakeDetection.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Scenes\ATVRiding\HandleScript.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Scenes\ATVRiding\ToggleCam.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Scenes\Bowling\DistanceReset.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Scenes\Bowling\HoverArea.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Scenes\Boxing\BagManager.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Scenes\Boxing\BagSpawner.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Scenes\Boxing\BreakingBag.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Scenes\Boxing\PunchingBag.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Scenes\Driving\FollowCam.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Scenes\Driving\WheelForce.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Scenes\Flying\LeapFly.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Scenes\Flying\Orbit.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Scenes\Flying\Thruster.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Scenes\Weapons\CameraLerp.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Scenes\Weapons\InstantiateObject.cs" />
+     <Compile Include="Assets\Leap Motion\Scenes Pack\Scripts\Leap Scenes\Weapons\Projectile.cs" />
+     <Compile Include="Assets\TestScripts\CreateScreen.cs" />
+     <Compile Include="Assets\TestScripts\FaceThis.cs" />
+     <Compile Include="Assets\TestScripts\TestController.cs" />
+     <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Background.shader" />
+     <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Transparent Vertex Color.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Detail.shader" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Reflective.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Particles Additive Culled.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Vertex Colored.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Only.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap AlphaTest.shader" />
+ <Reference Include="Assembly-UnityScript-firstpass">
+ <HintPath>C:/Users/Public/Documents/Unity Projects/DesktopulusLEAPSP/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ </Reference>
+ <Reference Include="LeapCSharp.NET3.5">
+ <HintPath>C:/Users/Public/Documents/Unity Projects/DesktopulusLEAPSP/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
+      <Project>{714BD897-1022-97CA-5582-FD3FABDF3D1C}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

@@ -1,0 +1,109 @@
+-debug
+-target:library
+-nowarn:0169
+-out:Temp/Assembly-CSharp.dll
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll"
+-r:Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
+-r:Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll
+-r:Assets/Plugins/LeapCSharp.NET3.5.dll
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll"
+-define:UNITY_4_5_5
+-define:UNITY_4_5
+-define:UNITY_STANDALONE_WIN
+-define:ENABLE_MICROPHONE
+-define:ENABLE_TEXTUREID_MAP
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_NEW_HIERARCHY 
+-define:ENABLE_AUDIO_FMOD
+-define:UNITY_STANDALONE
+-define:ENABLE_MONO
+-define:ENABLE_TERRAIN
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_GENERICS
+-define:INCLUDE_WP8SUPPORT
+-define:ENABLE_MOVIES
+-define:ENABLE_WWW
+-define:ENABLE_IMAGEEFFECTS
+-define:INCLUDE_WP_BLUE_SUPPORT
+-define:ENABLE_WEBCAM
+-define:INCLUDE_METROSUPPORT
+-define:RENDER_SOFTWARE_CURSOR
+-define:ENABLE_NETWORK
+-define:ENABLE_PHYSICS
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_2D_PHYSICS
+-define:ENABLE_SHADOWS
+-define:ENABLE_AUDIO
+-define:ENABLE_NAVMESH_CARVING
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_SINGLE_INSTANCE_BUILD_SETTING
+-define:ENABLE_PROFILER
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_WIN
+"Assets/Leap Motion/Leap Controller/Scripts/Hand Types/FingerLineRender.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Hand Types/HandModel.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Hand Types/HandTypeBase.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Hand Types/HandTypeBasic.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Hand Types/HandTypeMultiple.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Hand Types/HandTypeRigged.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Leap Hand States/LeapGodHandState.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Leap Hand States/LeapNoHandState.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Leap Hand States/LeapShootableState.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Leap Hand States/LeapState.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Leap Hand States/LeapSwingableState.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Leap Hand/FingerDetection.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Leap Hand/RiggedHandTransforms.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Leap Hand/UnityHand.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Leap Hand/UnityHandSettings.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Leap Helpers/LeapHandController.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Leap Helpers/LeapInputEx.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Leap Helpers/LeapUnityExtensions.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Leap Objects/LeapBasicObject.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Leap Objects/LeapGameObject.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Leap Objects/LeapInactiveObject.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Leap Objects/LeapShootableObject.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Leap Objects/LeapSwingableObject.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Leap Objects/LeapThrowableObject.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Objects/ManageReturnables.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Objects/Returnable.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Objects/Triggers and Switches/ButtonTrigger.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Objects/Triggers and Switches/ImmediateReturn.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Objects/Triggers and Switches/SwitchTrigger.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Objects/Triggers and Switches/TriggerableObject.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Utility/Callback.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Utility/FSMState.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Utility/FiniteStateMachine.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Utility/Globals.cs"
+"Assets/Leap Motion/Leap Controller/Scripts/Utility/Messenger.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Hand States/LeapDrivingLeverState.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Hand States/LeapDrivingState.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Hand States/LeapHandleState.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Objects/LeapBoxingObject.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Objects/LeapFlashlightObject.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Objects/LeapGrenadeObject.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Objects/LeapHandleObject.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Objects/LeapSpeedLever.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Objects/LeapSteeringWheel.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Scenes/ATVRiding/BrakeDetection.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Scenes/ATVRiding/HandleScript.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Scenes/ATVRiding/ToggleCam.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Scenes/Bowling/DistanceReset.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Scenes/Bowling/HoverArea.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Scenes/Boxing/BagManager.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Scenes/Boxing/BagSpawner.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Scenes/Boxing/BreakingBag.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Scenes/Boxing/PunchingBag.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Scenes/Driving/FollowCam.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Scenes/Driving/WheelForce.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Scenes/Flying/LeapFly.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Scenes/Flying/Orbit.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Scenes/Flying/Thruster.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Scenes/Weapons/CameraLerp.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Scenes/Weapons/InstantiateObject.cs"
+"Assets/Leap Motion/Scenes Pack/Scripts/Leap Scenes/Weapons/Projectile.cs"
+Assets/TestScripts/CreateScreen.cs
+Assets/TestScripts/FaceThis.cs
+Assets/TestScripts/TestController.cs
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Mono\lib/mono/unity\System.Runtime.Serialization.dll"
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Mono\lib/mono/unity\System.Xml.Linq.dll"
