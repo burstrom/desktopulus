@@ -24,22 +24,26 @@ public class CreateScreen : MonoBehaviour {
 			var collision = Physics.OverlapSphere(startPos, 5.5f);
 			
 			bool looped = false;
+			float direction = 1.0f;
 			//Recalculate game position, something goes wrong here.
 			while (collision.Length > 0){
 				if(collision[0] == Target){
-					Debug.Log("Collided with camera.");
+					Debug.Log(multiplier);
 					break;
 				}
-				multiplier += 0.05f;
+				multiplier += 0.05f*direction;
 				Debug.Log(multiplier);
 				//catch the base case when you reach 1 Pi, loop around to other side.
-				if (multiplier >= 1.0f){
+				if (multiplier > 1.0f || multiplier < 0.0f){
 					if(looped){
+						startPos.y += 8.0f;
 						Debug.Log ("I looped all around");
-						break;
+						looped = false;
+					} else {
+						direction *= -1.0f;
+						multiplier = 0.5f;
+						looped = true;
 					}
-					looped = true;
-					multiplier = 0.0f;
 				}
 				startPos.z = radius * Mathf.Sin(multiplier*Mathf.PI);
 				startPos.x = radius * Mathf.Cos(multiplier*Mathf.PI);
