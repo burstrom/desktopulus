@@ -48,11 +48,6 @@ For starters we have some smaller goals to finish:
 
 This project uses Unity (http://http://unity3d.com/).
 
-In our earlier development we used the open source 3D framework Minko3D ( *github can be located here: [github.com/aerys/minko/](https://github.com/aerys/minko/)* )
-
-
-
-
 ***
 
 *Thanks for paying attention to this project!*
