@@ -16,18 +16,27 @@ Our goal is to have a software that works on crossplattform: (Win,Lin & OSx)
 For starters we have some smaller goals to finish:
 
 ***
+## Completed goals:
+| Status | Description |
+| :------------ | :-----|
+| [COMPLETED] | Working 3D environment | 
+| [COMPLETED] | Implementing support for Oculus Rift (unity support already exists)|
+| [COMPLETED] | Implementing support for Leap Motion (unity support already exists)|
 
-## Current goals:
+
+## In development:
 
 | Status | Description |
 | :------------ | :-----|
-| [IN PROGRESS] | Working 3D environment |
-| [DEVELOPMENT STAGE] | Mirroring the monitor in a 3D-program.|
-| [PRE-DEVELOPMENT STAGE] | Implementing support for Oculus Rift |
+| [DEVELOPMENT STAGE] | Creating 3D monitor similar objects for our application|
+| [DEVELOPMENT STAGE] | Leap motion working with our 3D application. |
+| [DEVELOPMENT STAGE] | Oculus motion working with our 3D application. |
+
 
 ## Future goals:
 | Status | Description |
 | :------------ | :-----|
+| [PLANNING STAGE] | Mirroring the monitor in a 3D-program.|
 | [PLANNING STAGE] | Being able to Use the desktop while mirroring the monitor in the 3D program |
 | [PLANNING STAGE] | Simulating a non-physical display.|
 | [PLANNING STAGE] | Being able to mirror the non-physical monitor in our program |
@@ -37,9 +46,7 @@ For starters we have some smaller goals to finish:
 
 ***
 
-This project uses the [Minko3D](http://minko.io/) framework. 
-
-*github can be located here: [github.com/aerys/minko/](https://github.com/aerys/minko/)*
+This project uses Unity (http://http://unity3d.com/).
 
 ***
 
