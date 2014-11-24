@@ -32,13 +32,20 @@ public class CreateScreen : MonoBehaviour {
 			float sideDirection = 1.0f;
 			float vertDirection = 1.0f;
 			
-			//testcode
 
+			bool isScreen = false;
 			
 			//Try new positions to add the screen while a collision is detected.
 			while (collision.Length > 0){
-				if (string.Equals(collision[0].tag, "Screens")){
-					Debug.Log ("BALLEN");
+			
+				//Check for screens in the collision array.
+				foreach(var item in collision){
+					if (string.Equals(item.tag, "Screens")){
+						isScreen = true;
+					}
+				}
+				//If a screen is detected, move the start location. Else place the screen.
+				if (isScreen){
 					multiplier += 0.05f*sideDirection;
 					//catch the base case when you reach 1 Pi, prevents screens from being spawned behind the actor.
 					//If it can spawn no more at a height-level it alternatingly jumps above and below the actor to spawn.
@@ -57,8 +64,9 @@ public class CreateScreen : MonoBehaviour {
 					startPos.z = radius * Mathf.Sin(multiplier*Mathf.PI);
 					startPos.x = radius * Mathf.Cos(multiplier*Mathf.PI);
 					collision = Physics.OverlapSphere(startPos, 5.5f);
+					//Reset the isScreen variable so it works for the next round of checks.
+					isScreen = false;
 				} else {
-					Debug.Log (collision.Length);
 					break;
 				}
 					

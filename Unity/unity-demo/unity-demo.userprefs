@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TestScripts\CreateScreen.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Leap Motion\Leap Controller\Scripts\Leap Objects\LeapBasicObject.cs">
     <Files>
-      <File FileName="Assets\TestScripts\CreateScreen.cs" Line="59" Column="7" />
+      <File FileName="Assets\TestScripts\CreateScreen.cs" Line="67" Column="77" />
+      <File FileName="Assets\Leap Motion\Leap Controller\Scripts\Leap Objects\LeapBasicObject.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
