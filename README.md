@@ -30,7 +30,6 @@ For starters we have some smaller goals to finish:
 
 | Status | Description |
 | :------------ | :-----|
-
 | [DEVELOPMENT STAGE] | Move around the screen-objects with the Leap Motion |
 | [DEVELOPMENT STAGE] | Better 3D environment (skybox and refactor code) |
 | [DEVELOPMENT STAGE] | Mirroring the monitor in a 3D-program.|
@@ -38,7 +37,6 @@ For starters we have some smaller goals to finish:
 ## (short-term) Future goals:
 | Status | Description |
 | :------------ | :-----|
-
 | [PLANNING STAGE] | Being able to Use the desktop while mirroring the monitor in the 3D program |
 | [PLANNING STAGE] | Being able to mirror the non-physical monitor in our program |
 | [PLANNING STAGE] | Being able to change the resolution manually |
