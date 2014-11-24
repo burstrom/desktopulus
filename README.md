@@ -22,26 +22,33 @@ For starters we have some smaller goals to finish:
 | [COMPLETED] | Working 3D environment | 
 | [COMPLETED] | Implementing support for Oculus Rift (unity support already exists)|
 | [COMPLETED] | Implementing support for Leap Motion (unity support already exists)|
-
+| [COMPLETED] | Creating 3D monitor similar objects for our application|
+| [COMPLETED] | Leap motion working with our 3D application. |
+| [COMPLETED] | Oculus motion working with our 3D application. |
 
 ## In development:
 
 | Status | Description |
 | :------------ | :-----|
-| [DEVELOPMENT STAGE] | Creating 3D monitor similar objects for our application|
-| [DEVELOPMENT STAGE] | Leap motion working with our 3D application. |
-| [DEVELOPMENT STAGE] | Oculus motion working with our 3D application. |
 
+| [DEVELOPMENT STAGE] | Move around the screen-objects with the Leap Motion |
+| [DEVELOPMENT STAGE] | Better 3D environment (skybox and refactor code) |
+| [DEVELOPMENT STAGE] | Mirroring the monitor in a 3D-program.|
 
-## Future goals:
+## (short-term) Future goals:
 | Status | Description |
 | :------------ | :-----|
-| [PLANNING STAGE] | Mirroring the monitor in a 3D-program.|
+
 | [PLANNING STAGE] | Being able to Use the desktop while mirroring the monitor in the 3D program |
-| [PLANNING STAGE] | Simulating a non-physical display.|
 | [PLANNING STAGE] | Being able to mirror the non-physical monitor in our program |
 | [PLANNING STAGE] | Being able to change the resolution manually |
 | [PLANNING STAGE] | Making the program stable |
+
+## (very long-term) Future goals:
+| Status | Description |
+| :------------ | :-----|
+
+| [PLANNING STAGE] | Simulating a non-physical display.|
 | [PLANNING STAGE] | Crossplattform support, Linux/Windows/OSx |
 
 ***
