@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//Basic camera controls using keyboard. This is to be replaced by the oculus.
+
 public class TestController : MonoBehaviour {
+	//A little bit of drag to stop the camera from constantly accellerating.
 	void Start () {
 		rigidbody.drag = 2;
 	}
