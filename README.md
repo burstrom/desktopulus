@@ -47,7 +47,6 @@ For starters we have some smaller goals to finish:
 ## (very long-term) Future goals:
 | Status | Description |
 | :------------ | :-----|
-
 | [PLANNING STAGE] | Simulating a non-physical display.|
 | [PLANNING STAGE] | Crossplattform support, Linux/Windows/OSx |
 
