@@ -53,6 +53,7 @@ Still needs some more work to be done to it, but it's on it's way.
 * **[TEST]** - For adding tests
 * **[PERF]** - For performance tweaks
 * **[CLEAN]** - Well formedness and cleaning up code/directories
+* **[NEW]** - added something new within the directories (files, text, docs)
 * **[OTHER]** - For stuff that doesn't fit in any of the above codes
 
 
