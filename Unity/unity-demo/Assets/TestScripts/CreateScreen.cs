@@ -5,6 +5,7 @@ public class CreateScreen : MonoBehaviour {
 	public GameObject Screen;
 	public Transform Target;
 	private float[] screen;
+	public Transform Hands;
 	
 	// Update is called once per frame
 	void Update () {
@@ -31,31 +32,36 @@ public class CreateScreen : MonoBehaviour {
 			float sideDirection = 1.0f;
 			float vertDirection = 1.0f;
 			
+			//testcode
+
+			
 			//Try new positions to add the screen while a collision is detected.
 			while (collision.Length > 0){
-				if(collision[0] == Target){
-					Debug.Log(multiplier);
+				if (string.Equals(collision[0].tag, "Screens")){
+					Debug.Log ("BALLEN");
+					multiplier += 0.05f*sideDirection;
+					//catch the base case when you reach 1 Pi, prevents screens from being spawned behind the actor.
+					//If it can spawn no more at a height-level it alternatingly jumps above and below the actor to spawn.
+					if (multiplier > 1.0f || multiplier < 0.0f){
+						if(looped){
+							startPos.y += 8.0f*vertDirection;
+							vertDirection *= -2.0f;
+							Debug.Log("I looped all around");
+							looped = false;
+						} else {
+							sideDirection *= -1.0f;
+							multiplier = 0.5f;
+							looped = true;
+						}
+					}
+					startPos.z = radius * Mathf.Sin(multiplier*Mathf.PI);
+					startPos.x = radius * Mathf.Cos(multiplier*Mathf.PI);
+					collision = Physics.OverlapSphere(startPos, 5.5f);
+				} else {
+					Debug.Log (collision.Length);
 					break;
 				}
-				multiplier += 0.05f*sideDirection;
-				Debug.Log(multiplier);
-				//catch the base case when you reach 1 Pi, prevents screens from being spawned behind the actor.
-				//If it can spawn no more at a height-level it alternatingly jumps above and below the actor to spawn.
-				if (multiplier > 1.0f || multiplier < 0.0f){
-					if(looped){
-						startPos.y += 8.0f*vertDirection;
-						vertDirection *= -2.0f;
-						Debug.Log ("I looped all around");
-						looped = false;
-					} else {
-						sideDirection *= -1.0f;
-						multiplier = 0.5f;
-						looped = true;
-					}
-				}
-				startPos.z = radius * Mathf.Sin(multiplier*Mathf.PI);
-				startPos.x = radius * Mathf.Cos(multiplier*Mathf.PI);
-				collision = Physics.OverlapSphere(startPos, 5.5f);
+					
 			}
 			
 			//Actually create the screen.

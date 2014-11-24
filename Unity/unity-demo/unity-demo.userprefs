@@ -1,8 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\OVR\Scripts\OvrCapi.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TestScripts\CreateScreen.cs">
     <Files>
-      <File FileName="Assets\OVR\Scripts\OvrCapi.cs" Line="1309" Column="1" />
+      <File FileName="Assets\TestScripts\CreateScreen.cs" Line="59" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
