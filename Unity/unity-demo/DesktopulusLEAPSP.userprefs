@@ -4,7 +4,7 @@
     <Files>
       <File FileName="Assets\TestScripts\TestController.cs" Line="7" Column="3" />
       <File FileName="Assets\TestScripts\FaceThis.cs" Line="8" Column="18" />
-      <File FileName="Assets\TestScripts\CreateScreen.cs" Line="41" Column="25" />
+      <File FileName="Assets\TestScripts\CreateScreen.cs" Line="41" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
