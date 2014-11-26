@@ -14,20 +14,7 @@ public class LeapScreenObject : LeapGameObject{
 		if (owner != null){
 			return null;
 		}
-		
-		if (h.unityHand.isRightHand){
-			Debug.Log ("RIGHT");
-		} else {
-			Debug.Log ("LEFT");
-		}
-		//hmm, I always detect all fingers? unityFingers are not the fingers you're looking for.
-		//foreach (var finger in h.unityHand.unityFingers){
-		//	Debug.Log (finger);
-		//}
-		//We can detect the amount of fingers? Doing a pinching motion seems to trigger as "1" finger. Lets try it.
-		//Debug.Log("The amount of fingers detected is: " + h.unityHand.hand.Fingers.Count);
 
-		
 		if (canGoThroughGeometry && rigidbody)
 		{
 			rigidbody.isKinematic = true;
