@@ -112,6 +112,7 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRVisionGuide.cs" />
      <Compile Include="Assets\TestScripts\CreateScreen.cs" />
      <Compile Include="Assets\TestScripts\FaceThis.cs" />
+     <Compile Include="Assets\TestScripts\LeapControl.cs" />
      <Compile Include="Assets\TestScripts\LeapScreenObject.cs" />
      <Compile Include="Assets\TestScripts\TestController.cs" />
      <Compile Include="Assets\TestScripts\UpdateScreen.cs" />

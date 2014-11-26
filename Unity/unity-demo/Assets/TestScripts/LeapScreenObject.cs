@@ -65,7 +65,7 @@ public class LeapScreenObject : LeapGameObject{
 	{	
 		//Only update translation if you are doing a full grab. If any fingers are detected, assume you are trying to do a gesture.
 		if(t.unityHand.hand.Fingers.Count == 0){
-			base.UpdateTransform(t);
+			base.UpdateTransform(t); 
 		}
 		
 		//For each gesture detected.
@@ -74,46 +74,21 @@ public class LeapScreenObject : LeapGameObject{
 			//Check if the gesture was a circle
 			if (g.Type == Gesture.GestureType.TYPECIRCLE)
 			{
-				Debug.Log ("CIRCLE DETECTED!");
-				
-				Debug.Log ("a: " + g.Type);
-				Debug.Log ("b: " + Gesture.GestureType.TYPECIRCLE);
-				 
-				//Debug.Log (g.Normal as CircleGesture);
-				//Debug.Log(circle.Normal);
+				//Create an actual circle gesture out of the gesture. This is needed in order to access .Normal .
+				CircleGesture cg = new CircleGesture(g);
 
-//				Debug.Log(g.Pointables[0].Direction.AngleTo(c.Normal));
-//				if (g.Pointables[0].Direction.AngleTo(c.Normal) <= Mathf.PI/2) {
-//					string clockwiseness = "clockwise detected, increasing size.";
-//					base.transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
-//					
-//					Debug.Log (clockwiseness);
-//				}
-//				else
-//				{
-//					string clockwiseness = "counterclockwise detected, decreasing size.";
-//					base.transform.localScale -= new Vector3(0.1f, 0.1f, 0.1f);
-//					
-//					Debug.Log (clockwiseness);
-//				}
-//				//Normally we would want to use AngleTo to compare the pointable vector to the NORMAL of the gesture.
-//				//However for some reason I can't access this variable in unity. So I do it by basically checking against the Yaw of
-//				//the hand doing the gesture. This is incredibly buggy atm...
-//				if (g.Pointables[0].Hand.PalmNormal.Yaw < 0.0f) {
-//					string clockwiseness = "clockwise detected, increasing size.";
-//					base.transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
-//					
-//					Debug.Log (clockwiseness);
-//				}
-//				else
-//				{
-//					string clockwiseness = "counterclockwise detected, decreasing size.";
-//					base.transform.localScale -= new Vector3(0.1f, 0.1f, 0.1f);
-//					
-//					Debug.Log (clockwiseness);
-//				}
-				
-				
+				//Check the angle between the finger performing the gesture to the normal of the gesture.
+				//If it is less than Pi/2, we are dealing with a clockwise circle. 
+				if (g.Pointables[0].Direction.AngleTo(cg.Normal) <= Mathf.PI/2) {
+					//Is clockwise, increase size.
+					base.transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+				}
+				else
+				{
+					//Is anti-clockwise, decrease size.
+					base.transform.localScale -= new Vector3(0.1f, 0.1f, 0.1f);
+				}
+						
 			}
 		}
 		
