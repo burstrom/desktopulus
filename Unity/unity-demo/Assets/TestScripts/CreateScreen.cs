@@ -5,7 +5,6 @@ public class CreateScreen : MonoBehaviour {
 	public GameObject Screen;
 	public Transform Target;
 	private float[] screen;
-	public Transform Hands;
 	
 	// Update is called once per frame
 	void Update () {

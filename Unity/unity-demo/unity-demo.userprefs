@@ -1,10 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TestScripts\LeapScreenObject.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Leap Motion\Leap Controller\Scripts\Leap Objects\LeapShootableObject.cs">
     <Files>
-      <File FileName="Assets\TestScripts\CreateScreen.cs" Line="47" Column="53" />
-      <File FileName="Assets\Leap Motion\Leap Controller\Scripts\Leap Objects\LeapBasicObject.cs" Line="9" Column="1" />
-      <File FileName="Assets\TestScripts\LeapScreenObject.cs" Line="8" Column="47" />
+      <File FileName="Assets\TestScripts\LeapScreenObject.cs" Line="34" Column="1" />
+      <File FileName="Assets\TestScripts\UpdateScreen.cs" Line="1" Column="1" />
+      <File FileName="Assets\Leap Motion\Leap Controller\Scripts\Leap Hand\UnityHand.cs" Line="54" Column="3" />
+      <File FileName="Assets\Leap Motion\Leap Controller\Scripts\Leap Helpers\LeapHandController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Leap Motion\Leap Controller\Scripts\Hand Types\HandTypeMultiple.cs" Line="1" Column="1" />
+      <File FileName="Assets\Leap Motion\Leap Controller\Scripts\Leap Hand States\LeapShootableState.cs" Line="1" Column="1" />
+      <File FileName="Assets\Leap Motion\Leap Controller\Scripts\Leap Objects\LeapShootableObject.cs" Line="21" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

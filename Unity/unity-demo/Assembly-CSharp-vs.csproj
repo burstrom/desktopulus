@@ -112,9 +112,9 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRVisionGuide.cs" />
      <Compile Include="Assets\TestScripts\CreateScreen.cs" />
      <Compile Include="Assets\TestScripts\FaceThis.cs" />
-     <Compile Include="Assets\TestScripts\LeapControl.cs" />
      <Compile Include="Assets\TestScripts\LeapScreenObject.cs" />
      <Compile Include="Assets\TestScripts\TestController.cs" />
+     <Compile Include="Assets\TestScripts\UpdateScreen.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
      <None Include="Assets\Plugins\donotdelete.txt" />
