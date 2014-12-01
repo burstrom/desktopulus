@@ -39,9 +39,7 @@ public class LeapScreenObject : LeapGameObject{
 				rigidbody.isKinematic = false;
 				rigidbody.useGravity = false;
 			}
-			//Just to test if it worked, this is to be put in the "pinch drag" action. Or rather a version that does the size change
-			//Dynamically
-			//base.transform.localScale += new Vector3(2.0f, 2.0f, 2.0f);
+
 			state = base.Release(h);
 		}
 		
