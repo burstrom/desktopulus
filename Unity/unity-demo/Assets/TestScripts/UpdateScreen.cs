@@ -14,7 +14,12 @@ public class UpdateScreen : MonoBehaviour {
 	IEnumerator updateTexture(){
 		WWW www = new WWW("file://Screenshot.png");
 		yield return www;
+		if (renderer.material.mainTexture != null)
+			DestroyImmediate(renderer.material.mainTexture, true);
+			
 		renderer.material.mainTexture = www.texture;
+		
+		www.Dispose();
 	}
 	
 	// Use this for initialization
@@ -38,12 +43,18 @@ public class UpdateScreen : MonoBehaviour {
 		//The following two steps, we want to skip, basically we want to apply the texture directly wihtout saving it first.
 		
 		//Convert the bitmap image into an "actual" image.
+		gfxScreenshot.Dispose();
 		bmpScreenshot.Save("Screenshot.png", ImageFormat.Png);
+		
 		
 		//Get rid of the screenshots from memory.
 		bmpScreenshot.Dispose();
-		gfxScreenshot.Dispose();
+		
+		
 		StartCoroutine(updateTexture());
+		
+		
+		
 		
 	}
 	
