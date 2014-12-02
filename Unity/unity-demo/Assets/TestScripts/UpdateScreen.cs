@@ -10,7 +10,13 @@ public class UpdateScreen : MonoBehaviour {
 
 	private static System.Drawing.Bitmap bmpScreenshot;
 	private static System.Drawing.Graphics gfxScreenshot;
-
+	
+	IEnumerator updateTexture(){
+		WWW www = new WWW("file://Screenshot.png");
+		yield return www;
+		renderer.material.mainTexture = www.texture;
+	}
+	
 	// Use this for initialization
 	void Start () {
 	
@@ -34,19 +40,11 @@ public class UpdateScreen : MonoBehaviour {
 		//Convert the bitmap image into an "actual" image.
 		bmpScreenshot.Save("Screenshot.png", ImageFormat.Png);
 		
+		//Get rid of the screenshots from memory.
 		bmpScreenshot.Dispose();
-		gfxScreenshot.Dispose ();
+		gfxScreenshot.Dispose();
+		StartCoroutine(updateTexture());
 		
-		
-		
-		
-		// "Download" the screenshot.
-		var www = new WWW("file://Screenshot.png");
-			
-			
-		//Apply the screenshot as a texture, replacing the current one.
-		renderer.material.mainTexture = www.texture;
-		//renderer.material.mainTexture = (System.Drawing.Image)bmpScreenshot;
-
 	}
+	
 }
