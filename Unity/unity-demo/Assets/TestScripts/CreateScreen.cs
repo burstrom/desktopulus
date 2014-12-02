@@ -5,7 +5,6 @@ public class CreateScreen : MonoBehaviour {
 	public GameObject Screen;
 	public Transform Target;
 	private float[] screen;
-	public Transform Hands;
 	
 	// Update is called once per frame
 	void Update () {
@@ -51,7 +50,8 @@ public class CreateScreen : MonoBehaviour {
 					//If it can spawn no more at a height-level it alternatingly jumps above and below the actor to spawn.
 					if (multiplier > 1.0f || multiplier < 0.0f){
 						if(looped){
-							startPos.y += 8.0f*vertDirection;
+							multiplier = 0.5f;
+							startPos.y += 10.0f*vertDirection;
 							vertDirection *= -2.0f;
 							Debug.Log("I looped all around");
 							looped = false;

@@ -115,6 +115,7 @@
      <Compile Include="Assets\TestScripts\LeapControl.cs" />
      <Compile Include="Assets\TestScripts\LeapScreenObject.cs" />
      <Compile Include="Assets\TestScripts\TestController.cs" />
+     <Compile Include="Assets\TestScripts\UpdateScreen.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
      <None Include="Assets\Plugins\donotdelete.txt" />
@@ -134,6 +135,12 @@
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap AlphaTest.shader" />
      <None Include="Assets\OVR\Shaders\OVRGUIShader.shader" />
      <None Include="Assets\Plugins\x86\donotdelete.txt" />
+ <Reference Include="System.Drawing">
+ <HintPath>C:/git/desktopulus/Unity/unity-demo/Assets/System.Drawing.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Windows.Forms">
+ <HintPath>C:/git/desktopulus/Unity/unity-demo/Assets/System.Windows.Forms.dll</HintPath>
+ </Reference>
  <Reference Include="LeapCSharp.NET3.5">
  <HintPath>C:/git/desktopulus/Unity/unity-demo/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
  </Reference>
