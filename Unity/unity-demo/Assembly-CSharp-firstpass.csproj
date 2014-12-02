@@ -67,6 +67,12 @@
      <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap AlphaTest.shader" />
      <None Include="Assets\OVR\Shaders\OVRGUIShader.shader" />
      <None Include="Assets\Plugins\x86\donotdelete.txt" />
+ <Reference Include="System.Drawing">
+ <HintPath>C:/git/desktopulus/Unity/unity-demo/Assets/System.Drawing.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Windows.Forms">
+ <HintPath>C:/git/desktopulus/Unity/unity-demo/Assets/System.Windows.Forms.dll</HintPath>
+ </Reference>
  <Reference Include="LeapCSharp.NET3.5">
  <HintPath>C:/git/desktopulus/Unity/unity-demo/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
  </Reference>
