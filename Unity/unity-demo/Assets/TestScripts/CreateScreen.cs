@@ -5,10 +5,12 @@ public class CreateScreen : MonoBehaviour {
 	public GameObject Screen;
 	public Transform Target;
 	private float[] screen;
+	private static int num = 0;
 	
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetButtonDown("CreateScreen")){
+			
 			//Radius, this is the distance between the actor and the screens.
 			float radius = 8.0f;
 			//This is the multiplier for placing screens in a multiplier*pi half circle around the actor. Starts at 0.5 to place directly in front.
@@ -75,6 +77,8 @@ public class CreateScreen : MonoBehaviour {
 			//Actually create the screen.
 			GameObject newscreen = Instantiate(Screen, startPos, transform.rotation) as GameObject;
 			newscreen.GetComponent<FaceThis>().target = Target;
+			newscreen.GetComponent<updateObject>().screenNum = num;
+			num += 1;
 		}
 	}
 }
