@@ -49,16 +49,18 @@ public class UpdateScreen : MonoBehaviour {
 			//Convert the bitmap image into an "actual" image.
 			gfxScreenshot.Dispose();
 			bmpScreenshot.Save("Screenshot.png", ImageFormat.Png);
-			
+		Debug.Log(System.Windows.Forms.Screen.AllScreens[GetComponent<updateObject>().screenNum].WorkingArea);
 			
 			//Get rid of the screenshots from memory.
 			bmpScreenshot.Dispose();
+			StartCoroutine(updateTexture());
+			
 		} catch (System.IndexOutOfRangeException e){
 			Debug.Log ("Can not update screen, has no valid input.");
 		}
 		
 		
-		StartCoroutine(updateTexture());
+		
 		
 		
 		
