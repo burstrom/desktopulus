@@ -27,7 +27,8 @@ public class UpdateScreen : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{		
-				Debug.Log (System.Windows.Forms.Screen.AllScreens.Length);
+				Debug.Log("AllScreens.Length: " + System.Windows.Forms.Screen.AllScreens.Length);
+				Debug.Log("MonitorCount: " + System.Windows.Forms.SystemInformation.MonitorCount);
 				// Use System.Window.Forms to access the screen you want to capture. Capture a bitmap of that screen.
 				// XXXX For some reason, AllScreens always only has one object in it. 
 				try {
