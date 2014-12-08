@@ -25,27 +25,26 @@ public class UpdateScreen : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{		
-				string info = "";
-				foreach(var screen in System.Windows.Forms.Screen.AllScreens){
-					info = info + "Working Area: " + screen.WorkingArea.ToString() + "Primary Screen: " + screen.Primary.ToString() + "\n";
-					Debug.Log (info);
-				}
+				
 				// Use System.Window.Forms to access the screen you want to capture. Capture a bitmap of that screen.
 				//Right now we capture the primary screen all the time but using AllScreens[i] we can access all the screens.
 				try {
-						width = System.Windows.Forms.Screen.AllScreens [GetComponent<updateObject> ().screenNum].Bounds.Width;
-						height = System.Windows.Forms.Screen.AllScreens [GetComponent<updateObject> ().screenNum].Bounds.Height;
+						Debug.Log (GetComponent<updateObject> ().screenNum);
+						//width = System.Windows.Forms.Screen.AllScreens [GetComponent<updateObject> ().screenNum].Bounds.Width;
+						//height = System.Windows.Forms.Screen.AllScreens [GetComponent<updateObject> ().screenNum].Bounds.Height;
+						width = System.Windows.Forms.Screen.AllScreens [GetComponent<updateObject> ().screenNum].WorkingArea.Width;
+						height = System.Windows.Forms.Screen.AllScreens [GetComponent<updateObject> ().screenNum].WorkingArea.Height;
 				
 						bmpScreenshot = new System.Drawing.Bitmap (width, height, 
 			                                          PixelFormat.Format32bppArgb);
 			                                          
 						gfxScreenshot = System.Drawing.Graphics.FromImage (bmpScreenshot);
 	
-						gfxScreenshot.CopyFromScreen (System.Windows.Forms.Screen.AllScreens [GetComponent<updateObject> ().screenNum].Bounds.X,
-			                             System.Windows.Forms.Screen.AllScreens [GetComponent<updateObject> ().screenNum].Bounds.Y,
+						gfxScreenshot.CopyFromScreen (System.Windows.Forms.Screen.AllScreens [GetComponent<updateObject> ().screenNum].WorkingArea.X,
+			                             System.Windows.Forms.Screen.AllScreens [GetComponent<updateObject> ().screenNum].WorkingArea.Y,
 			                             0,
 			                             0,
-			                             System.Windows.Forms.Screen.AllScreens [GetComponent<updateObject> ().screenNum].Bounds.Size,
+			                             System.Windows.Forms.Screen.AllScreens [GetComponent<updateObject> ().screenNum].WorkingArea.Size,
 			                             System.Drawing.CopyPixelOperation.SourceCopy);
 						//The following two steps, we want to skip, basically we want to apply the texture directly wihtout saving it first.
 			
