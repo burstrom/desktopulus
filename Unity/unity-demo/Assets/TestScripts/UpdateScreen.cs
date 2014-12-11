@@ -15,23 +15,17 @@ public class UpdateScreen : MonoBehaviour
 		private int height;
 		private int width;
 		private int screenNum;
-		
-	
-		
-		// Use this for initialization
-		void Start ()
-		{
-	
-		}
 	
 		// Update is called once per frame
 		void Update ()
 		{		
 				Debug.Log("AllScreens.Length: " + System.Windows.Forms.Screen.AllScreens.Length);
 				Debug.Log("MonitorCount: " + System.Windows.Forms.SystemInformation.MonitorCount);
+				
 				// Use System.Window.Forms to access the screen you want to capture. Capture a bitmap of that screen.
 				// XXXX For some reason, AllScreens always only has one object in it. 
 				try {
+						Debug.Log("Trying to draw AllScreens[" + screenNum + "]");
 						screenNum = GetComponent<updateObject>().screenNum;
 						width = System.Windows.Forms.Screen.AllScreens[screenNum].WorkingArea.Width;
 						height = System.Windows.Forms.Screen.AllScreens[screenNum].WorkingArea.Height;
@@ -74,7 +68,8 @@ public class UpdateScreen : MonoBehaviour
 						//Set the new texture as the main one.
 						texture.LoadImage(barr);
 						renderer.material.mainTexture = texture;
-			
+				
+				//Catch if you have more virtual screens than real screens.
 				} catch (System.IndexOutOfRangeException e) {
 						Debug.Log ("Can not update screen, has no valid input:" + e);
 				}
