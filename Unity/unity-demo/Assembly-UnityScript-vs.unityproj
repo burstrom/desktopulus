@@ -78,19 +78,19 @@
      <None Include="Assets\OVR\Shaders\OVRGUIShader.shader" />
      <None Include="Assets\Plugins\x86\donotdelete.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/Users/Kenneth/Desktop/M7012E/desktopulus/Unity/unity-demo/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>C:/git/desktopulus/Unity/unity-demo/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="OpenTK">
- <HintPath>C:/Users/Kenneth/Desktop/M7012E/desktopulus/Unity/unity-demo/Assets/OpenTK.dll</HintPath>
+ <HintPath>C:/git/desktopulus/Unity/unity-demo/Assets/OpenTK.dll</HintPath>
  </Reference>
  <Reference Include="System.Drawing">
- <HintPath>C:/Users/Kenneth/Desktop/M7012E/desktopulus/Unity/unity-demo/Assets/System.Drawing.dll</HintPath>
+ <HintPath>C:/git/desktopulus/Unity/unity-demo/Assets/System.Drawing.dll</HintPath>
  </Reference>
  <Reference Include="System.Windows.Forms">
- <HintPath>C:/Users/Kenneth/Desktop/M7012E/desktopulus/Unity/unity-demo/Assets/System.Windows.Forms.dll</HintPath>
+ <HintPath>C:/git/desktopulus/Unity/unity-demo/Assets/System.Windows.Forms.dll</HintPath>
  </Reference>
  <Reference Include="LeapCSharp.NET3.5">
- <HintPath>C:/Users/Kenneth/Desktop/M7012E/desktopulus/Unity/unity-demo/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
+ <HintPath>C:/git/desktopulus/Unity/unity-demo/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

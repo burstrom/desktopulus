@@ -1,8 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TestScripts\DemoScreen.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TestScripts\DemoGifLoader.cs">
     <Files>
-      <File FileName="Assets\TestScripts\DemoScreen.cs" Line="16" Column="52" />
+      <File FileName="Assets\TestScripts\DemoScreen.cs" Line="33" Column="4" />
+      <File FileName="Assets\TestScripts\DemoGifLoader.cs" Line="12" Column="28" />
+      <File FileName="c:\git\desktopulus\Unity\unity-demo\Assets\OVR\Scripts\OVRCommon.cs" Line="95" Column="65" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
