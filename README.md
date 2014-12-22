@@ -1,4 +1,4 @@
-# Desktopulus v.0.0.1.2-pre-alpha
+# Desktopulus v.0.1.4.2-alpha
 ###### Desktopulus is a 3D Virtual Desktop software which will be Open-source.
 ####Initial project developers: [Burstrom](https://github.com/burstrom), [Kandarian](https://github.com/Kandarian), [Zakjut](https://github.com/Zakjut) & [Olleboll](https://github.com/Olleboll)
 
@@ -25,18 +25,21 @@ For starters we have some smaller goals to finish:
 | [COMPLETED] | Creating 3D monitor similar objects for our application|
 | [COMPLETED] | Leap motion working with our 3D application. |
 | [COMPLETED] | Oculus motion working with our 3D application. |
-
+| [COMPLETED] | Move around the screen-objects with the Leap Motion |
+| [COMPLETED] | Better 3D environment (skybox and refactor code) |
+| [half-COMPLETED] | Mirroring the monitor in a 3D-program.|
+| [COMPLETED] | Creating a DEMO (Check out the demo-branch! its awesome!) |
 ## In development:
 
 | Status | Description |
 | :------------ | :-----|
-| [DEVELOPMENT STAGE] | Move around the screen-objects with the Leap Motion |
-| [DEVELOPMENT STAGE] | Better 3D environment (skybox and refactor code) |
-| [DEVELOPMENT STAGE] | Mirroring the monitor in a 3D-program.|
+
+| [N/A] |N/A (Nothing is in development for the moment)|
 
 ## (short-term) Future goals:
 | Status | Description |
 | :------------ | :-----|
+| [PLANNING STAGE] |Mirroring the monitor in a 3D-program. (Performance tweaking or alternative way of mirroring)|
 | [PLANNING STAGE] | Being able to Use the desktop while mirroring the monitor in the 3D program |
 | [PLANNING STAGE] | Being able to mirror the non-physical monitor in our program |
 | [PLANNING STAGE] | Being able to change the resolution manually |
