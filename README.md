@@ -33,8 +33,7 @@ For starters we have some smaller goals to finish:
 
 | Status | Description |
 | :------------ | :-----|
-
-| [N/A] |N/A (Nothing is in development for the moment)|
+| [N/A] | Nothing is in development for the moment|
 
 ## (short-term) Future goals:
 | Status | Description |
