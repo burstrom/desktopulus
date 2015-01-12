@@ -54,7 +54,10 @@ For starters we have some smaller goals to finish:
 
 ## How does it look?:
 ![](https://github.com/burstrom/desktopulus/blob/master/Demo_pictures/Collage.jpg)
+***
+[![Short video](http://img.youtube.com/vi/Xn8xc1KTd2U/0.jpg)](http://www.youtube.com/watch?v=Xn8xc1KTd2U)
 
+PS: This does not show the leapmotion or oculus effects.
 
 ***
 
