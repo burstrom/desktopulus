@@ -52,6 +52,12 @@ For starters we have some smaller goals to finish:
 
 ***
 
+## How does it look?:
+![](https://github.com/burstrom/desktopulus/blob/master/Demo_pictures/Collage.jpg)
+
+
+***
+
 This project uses Unity (http://http://unity3d.com/).
 
 ***
