@@ -1,4 +1,4 @@
-# Desktopulus v.0.1.4.2-alpha
+#  **[INACTIVE]** Desktopulus v.0.1.4.2-alpha
 ###### Desktopulus is a 3D Virtual Desktop software which will be Open-source.
 ####Initial project developers: [Burstrom](https://github.com/burstrom), [Kandarian](https://github.com/Kandarian), [Zakjut](https://github.com/Zakjut) & [Olleboll](https://github.com/Olleboll)
 
